@@ -41,7 +41,9 @@ Users have to make sure that this information is available in the input mzML fil
 
 ## Installation 
 
-ToDo
+```bash
+docker build -t metfragparameterexport .
+```
 
 ## Usage Instructions
 
