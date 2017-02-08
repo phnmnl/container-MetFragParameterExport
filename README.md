@@ -12,7 +12,7 @@ Native mzML files cannot be used directly to be processed by MetFrag which requi
 
 ## Issues
 
-MetFrag needs information about the precursor adduct types to process the MS/MS data correctly. Currently, there is no CV term available to represent this information. The MetFragParameterExport tool scans mzML files for user parameters (tag: userParam) to retrive this information, e.g.:
+MetFrag needs information about the precursor adduct types to process the MS/MS data correctly. Currently, there is no CV term available to represent this information in mzML. The MetFragParameterExport tool scans mzML files for user parameters (tag: userParam) to retrive this information, e.g.:
 ```bash
 <userParam name="Precursor_Ion" type="xsd:string" value="[M+H]+"/>
 ```
