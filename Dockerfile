@@ -14,6 +14,6 @@ RUN apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /t
 
 RUN apt-get -y purge maven git
 
-ENTRYPOINT ["bash"]
+# ENTRYPOINT ["bash"]
 
 # java -jar /usr/local/bin/MetFragParameterExport-0.1.jar
