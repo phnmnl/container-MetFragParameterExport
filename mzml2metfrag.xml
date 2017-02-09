@@ -7,12 +7,12 @@
   </requirements>
   <description>Conversion of mzML to MetFrag parameters</description>
   <command><![CDATA[
-        java -jar /usr/local/bin/MetFragParameterExporter.jar InputFile=$mzmlfile OutputFile=/tmp/output.txt
+        java -jar /usr/local/bin/MetFragParameterExporter.jar InputFile=$mzmlfile OutputFile=/tmp/output.txt;
 	if [ $? -eq 0 ]; then cat /tmp/output.txt > $outputfile; else exit 1; fi;
   ]]>
   </command>
   <inputs>
-    <param name="mzmlfile" type="data" format="txt" optional="False" label="Input file with peak list in tsv/txt format" />
+    <param name="mzmlfile" type="data" format="txt" optional="False" label="Input file with peak list in mzml format" />
     <param name="MetFragDatabaseType" type="select" value="KEGG" optional="False" label="Database" help="Database to which queries are sent.">
       <option value="KEGG" selected="True">KEGG</option>
       <option value="PubChem" selected="False">PubChem</option>
