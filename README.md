@@ -1,4 +1,4 @@
-# MetFragParameterExport
+# mzml2metfrag
 
 Version: 0.1
 
