@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--This is a configuration file for the integration of a tools into Galaxy (https://galaxyproject.org/).-->
+<!--Proposed Tool Section: [PhenoMeNal]-->
+<tool id="mzml2metfrag" name="mzml2metfrag" version="0.1">
+  <requirements>
+        <container type="docker">phnmnl/mzml2metfrag</container>
+  </requirements>
+  <description>Conversion of mzML to MetFrag parameters</description>
+  <command><![CDATA[
+        java -jar /usr/local/bin/MetFragParameterExporter.jar InputFile=$mzmlfile OutputFile=/tmp/output.txt
+	if [ $? -eq 0 ]; then cat /tmp/output.txt > $outputfile; else exit 1; fi;
+  ]]>
+  </command>
+  <inputs>
+    <param name="mzmlfile" type="data" format="txt" optional="False" label="Input file with peak list in tsv/txt format" />
+    <param name="MetFragDatabaseType" type="select" value="KEGG" optional="False" label="Database" help="Database to which queries are sent.">
+      <option value="KEGG" selected="True">KEGG</option>
+      <option value="PubChem" selected="False">PubChem</option>
+      <option value="ChemSpider" selected="False">ChemSpider</option>
+    </param>
+    <param name="ChemSpiderToken" type="text" value="" optional="True" label="ChemSpider token" help="ChemSpider token needed to access ChemSpider database." />
+    <param name="MaximumSpectrumLimit" type="text" value="" optional="True" label="Maximal number spectra" help="Maximum number spectra to export." />
+    <param name="DatabaseSearchRelativeMassDeviation" type="text" value="5" optional="False" label="Relative mass deviation for database search" help="Relative mass deviation used for database search." />
+    <param name="FragmentPeakMatchAbsoluteMassDeviation" type="text" value="0.001" optional="False" label="Fragment peak match absolute mass deviation" help="Absolute mass deviation for fragment peaks to be matched." />
+    <param name="FragmentPeakMatchRelativeMassDeviation" type="text" value="5" optional="False" label="Fragment peak match relative mass deviation" help="Relative mass deviation for fragment peaks to be matched." />
+    <param name="MetFragScoreTypes" type="text" value="1.0" optional="False" label="MetFrag Score Types" help="Scores used for MetFrag." />
+    <param name="MetFragScoreWeights" type="text" value="1.0" optional="False" label="MetFrag Score Weights" help="Weight used for scoring in MetFrag." />
+    <param name="MetFragPreProcessingCandidateFilter" type="text" value="IsotopeFilter,UnconnectedCompoundFilter" optional="False" label="Pre-processing candidate filter" help="Candidate filter used before candidates are processed." />
+    <param name="MetFragPostProcessingCandidateFilter" type="text" value="InChIKeyFilter" optional="False" label="Post-processing candidate filter" help="Candidate filter used after candidates were processed." />
+  </inputs>
+  <outputs>
+    <data name="outputfile" type="text" format="txt" label="Output file containing the parameters" />
+  </outputs>
+  <help>Converts a mzML file to parameters used directly as input for MetFrag.</help>
+</tool>
+
