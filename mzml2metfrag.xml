@@ -7,7 +7,6 @@
   </requirements>
   <description>Conversion of mzML to MetFrag parameters</description>
   <command><![CDATA[
-        echo "java -jar /usr/local/bin/MetFragParameterExport.jar InputFile=$mzmlfile OutputFile=/$outfolder MetFragDatabaseType=$MetFragDatabaseType ChemSpiderToken=$ChemSpiderToken MaximumSpectrumLimit=$MaximumSpectrumLimit DatabaseSearchRelativeMassDeviation=$DatabaseSearchRelativeMassDeviation FragmentPeakMatchAbsoluteMassDeviation=$FragmentPeakMatchAbsoluteMassDeviation FragmentPeakMatchRelativeMassDeviation=$FragmentPeakMatchRelativeMassDeviation MetFragScoreTypes=$MetFragScoreTypes MetFragScoreWeights=$MetFragScoreWeights MetFragPreProcessingCandidateFilter=$MetFragPreProcessingCandidateFilter MetFragPostProcessingCandidateFilter=$MetFragPostProcessingCandidateFilter IgnoreEmptyParameters=True";
 	java -jar /usr/local/bin/MetFragParameterExport.jar InputFile=$mzmlfile OutputFile=/$outfolder MetFragDatabaseType=$MetFragDatabaseType ChemSpiderToken=$ChemSpiderToken MaximumSpectrumLimit=$MaximumSpectrumLimit DatabaseSearchRelativeMassDeviation=$DatabaseSearchRelativeMassDeviation FragmentPeakMatchAbsoluteMassDeviation=$FragmentPeakMatchAbsoluteMassDeviation FragmentPeakMatchRelativeMassDeviation=$FragmentPeakMatchRelativeMassDeviation MetFragScoreTypes=$MetFragScoreTypes MetFragScoreWeights=$MetFragScoreWeights MetFragPreProcessingCandidateFilter=$MetFragPreProcessingCandidateFilter MetFragPostProcessingCandidateFilter=$MetFragPostProcessingCandidateFilter IgnoreEmptyParameters=True;
   ]]>
   </command>
