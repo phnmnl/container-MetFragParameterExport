@@ -7,8 +7,7 @@
   </requirements>
   <description>Conversion of mzML to MetFrag parameters</description>
   <command><![CDATA[
-        java -jar /usr/local/bin/MetFragParameterExport-0.1.jar InputFile=$mzmlfile OutputFile=/tmp/output.txt;
-	if [ $? -eq 0 ]; then cat /tmp/output.txt > $outputfile; else exit 1; fi;
+        java -jar /usr/local/bin/MetFragParameterExport-0.1.jar InputFile=$mzmlfile OutputFile=/$outfolder;
   ]]>
   </command>
   <inputs>
@@ -29,7 +28,7 @@
     <param name="MetFragPostProcessingCandidateFilter" type="text" value="InChIKeyFilter" optional="False" label="Post-processing candidate filter" help="Candidate filter used after candidates were processed." />
   </inputs>
   <outputs>
-    <data name="outputfile" type="text" format="txt" label="Output file containing the parameters" />
+    <data name="outfolder" type="text" format="txt" label="Output file containing the parameters" />
   </outputs>
   <help>Converts a mzML file to parameters used directly as input for MetFrag.</help>
 </tool>
