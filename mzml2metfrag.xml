@@ -23,7 +23,7 @@
     <param name="DatabaseSearchRelativeMassDeviation" type="text" value="5" optional="False" label="Relative mass deviation for database search" help="Relative mass deviation used for database search." />
     <param name="FragmentPeakMatchAbsoluteMassDeviation" type="text" value="0.001" optional="False" label="Fragment peak match absolute mass deviation" help="Absolute mass deviation for fragment peaks to be matched." />
     <param name="FragmentPeakMatchRelativeMassDeviation" type="text" value="5" optional="False" label="Fragment peak match relative mass deviation" help="Relative mass deviation for fragment peaks to be matched." />
-    <param name="MetFragScoreTypes" type="text" value="1.0" optional="False" label="MetFrag Score Types" help="Scores used for MetFrag." />
+    <param name="MetFragScoreTypes" type="text" value="FragmenterScore" optional="False" label="MetFrag Score Types" help="Scores used for MetFrag." />
     <param name="MetFragScoreWeights" type="text" value="1.0" optional="False" label="MetFrag Score Weights" help="Weight used for scoring in MetFrag." />
     <param name="MetFragPreProcessingCandidateFilter" type="text" value="IsotopeFilter,UnconnectedCompoundFilter" optional="False" label="Pre-processing candidate filter" help="Candidate filter used before candidates are processed." />
     <param name="MetFragPostProcessingCandidateFilter" type="text" value="InChIKeyFilter" optional="False" label="Post-processing candidate filter" help="Candidate filter used after candidates were processed." />
