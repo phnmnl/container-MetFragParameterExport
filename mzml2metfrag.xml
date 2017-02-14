@@ -18,6 +18,7 @@
       <option value="KEGG" selected="True">KEGG</option>
       <option value="PubChem" selected="False">PubChem</option>
       <option value="ChemSpider" selected="False">ChemSpider</option>
+      <option value="MetChem" selected="False">MetChem</option>
     </param>
     <param name="ChemSpiderToken" type="text" value="" optional="True" label="ChemSpider token" help="ChemSpider token needed to access ChemSpider database." />
     <param name="MaximumSpectrumLimit" type="text" value="" optional="True" label="Maximal number spectra" help="Maximum number spectra to export." />
