@@ -4,11 +4,11 @@ Version: 0.1
 
 ## Short Description
 
-Container to convert mzML files to MetFrag parameters used as direct input for MetFragCL.
+Tool to convert mzML files to MetFrag parameters used as direct input for MetFragCL.
 
 ## Description
 
-Native mzML files cannot be used directly to be processed by MetFrag which requires a conversion. Therefore this container used the Java implemented MetFragParameterExport (https://github.com/c-ruttkies/MetFragParameterExport) to retrieve the MS/MS spectra and additional parameters and convert them to MetFrag conform parameters. These parameters can be used as direct input for the MetFrag command line tool (https://github.com/c-ruttkies/MetFragRelaunched).
+Native mzML files cannot be used directly to be processed by MetFrag, thus requiring a conversion. This tool uses the Java implemented MetFragParameterExport (https://github.com/c-ruttkies/MetFragParameterExport) to retrieve the MS/MS spectra and additional parameters and convert them to MetFrag compliant parameters. These parameters can then be used as direct input for the MetFrag command line tool (https://github.com/c-ruttkies/MetFragRelaunched).
 
 ## Issues
 
